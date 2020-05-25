@@ -1,0 +1,48 @@
+body{
+    background-color: #222831;
+    color:#EEEEEE;
+    font-family: 'Ubuntu Mono', 'Consolas';
+}
+
+.main{
+    background-color: #2D4059;
+    max-width: auto;
+}
+
+.main2{
+    background-color: #ff7c4cc5;
+    width: 500px;
+}
+
+.navigation{
+    background-color: #2D4059;
+    overflow: hidden;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.navigation a{
+    color:#EEEEEE;   
+    text-decoration: none; 
+    text-align: center;
+    padding: 10px 10px;
+    float: left;    
+}
+
+.navigation a:hover{
+    background-color: #ff7c4cc5;
+}
+
+.navigation a:active{
+    background-color: #ab4e18;
+}
+
+.navigation a.selected{
+    background-color: #ff7c4cc5;
+}
+
+
+.littletxt{
+    font-size: 10px;
+}
