@@ -1,48 +1,65 @@
+:root{
+    --main-text-color: #EEEEEE;
+    --main-bg-color: #222831;
+    --secondary-bg-color: #2D4059;
+    --main-accent-color: #ff7c4cc5;
+    --dark-accent-color: #ab4e18;
+}
+
 body{
-    background-color: #222831;
-    color:#EEEEEE;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
     font-family: 'Ubuntu Mono', 'Consolas';
 }
 
-.main{
-    background-color: #2D4059;
+div.container{
+    background-color: var(--secondary-bg-color);
+    text-align: justify;
+    padding: 16px 32px;
+    border-radius: 2px;
     max-width: auto;
 }
 
-.main2{
-    background-color: #ff7c4cc5;
+div.accent{
+    background-color: var(--main-accent-color);
+    border-radius: 2px;
     width: 500px;
 }
 
-.navigation{
-    background-color: #2D4059;
+div.navigation{
+    background-color: var(--secondary-bg-color);
     overflow: hidden;
     font-variant: small-caps;
     font-weight: bold;
+    border-radius: 2px;
     font-size: 120%;
 }
 
-.navigation a{
-    color:#EEEEEE;   
+div.navigation a{
+    color: var(--main-text-color);   
     text-decoration: none; 
     text-align: center;
     padding: 10px 10px;
-    float: left;    
+    float: left;
+    transition: 0.5s;
 }
 
-.navigation a:hover{
-    background-color: #ff7c4cc5;
+div.navigation a:hover{
+    background-color: var(--main-accent-color);
 }
 
-.navigation a:active{
-    background-color: #ab4e18;
+div.navigation a:active{
+    background-color: var(--dark-accent-color);
 }
 
-.navigation a.selected{
-    background-color: #ff7c4cc5;
+div.navigation a.selected{
+    background-color: var(--main-accent-color);
 }
 
+div.navigation a.selected:active{
+    background-color: var(--dark-accent-color);
+}
 
-.littletxt{
+p.littletxt{
     font-size: 10px;
 }
