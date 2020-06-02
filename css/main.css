@@ -1,3 +1,7 @@
+/* A CSS-t készítette: Sebestyén Bálint és Szmoleniczki Ákos */
+
+/* Variables + Main stuff */
+
 :root{
     --main-text-color: #EEEEEE;
     --main-bg-color: #222831;
@@ -11,6 +15,8 @@ body{
     color: var(--main-text-color);
     font-family: 'Ubuntu Mono', 'Consolas';
 }
+
+/* Containers */
 
 div.container{
     background-color: var(--secondary-bg-color);
@@ -26,13 +32,15 @@ div.accent{
     width: 500px;
 }
 
+/* Navigation Bar */
+
 div.navigation{
     background-color: var(--secondary-bg-color);
     overflow: hidden;
-    font-variant: small-caps;
-    font-weight: bold;
     border-radius: 2px;
-    font-size: 120%;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0px;
 }
 
 div.navigation a{
@@ -42,6 +50,9 @@ div.navigation a{
     padding: 10px 10px;
     float: left;
     transition: 0.5s;
+    font-size: 120%;
+    font-variant: small-caps;
+    font-weight: bold;
 }
 
 div.navigation a:hover{
@@ -58,8 +69,4 @@ div.navigation a.selected{
 
 div.navigation a.selected:active{
     background-color: var(--dark-accent-color);
-}
-
-p.littletxt{
-    font-size: 10px;
 }
