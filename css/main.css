@@ -53,6 +53,8 @@ div.navigation a{
     font-size: 120%;
     font-variant: small-caps;
     font-weight: bold;
+    min-height: 20px;
+    max-height: 20px;
 }
 
 div.navigation a:hover{
@@ -69,4 +71,10 @@ div.navigation a.selected{
 
 div.navigation a.selected:active{
     background-color: var(--dark-accent-color);
+}
+
+.mainIcon{
+    max-width: 15%;
+    max-height: 15%;
+    height: auto;
 }
