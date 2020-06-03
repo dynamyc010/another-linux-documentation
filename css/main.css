@@ -61,8 +61,6 @@ div.navigation a{
     font-size: 120%;
     font-variant: small-caps;
     font-weight: bold;
-    min-height: 20px;
-    max-height: 20px;
 }
 
 div.navigation a:hover{
@@ -84,12 +82,11 @@ div.navigation a.selected:active{
 /* Other */
 
 img.main-icon{
-    max-width: 2%;
-    max-height: 2%;
-    height: auto;
+    max-width: 32px;
+    max-height: 32px;
     display: block;
     float: right;
-    margin-top: 3px;
+    margin-top: 5px;
     margin-right: 10px;
 }
 
@@ -97,5 +94,5 @@ p.credit{
     font-size: 75%;
     font-style: italic;
     float: right;
-    color: var(--secondary-bg-color);
+    color: rgba(255, 255, 255, 0.1);
 }
