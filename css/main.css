@@ -22,6 +22,7 @@ a{
 
 h2{
     background: rgba(255, 255, 255, 0.1);
+    padding: 3px;
 }
 
 /* Containers */
@@ -82,10 +83,14 @@ div.navigation a.selected:active{
 
 /* Other */
 
-img.mainIcon{
-    max-width: 15%;
-    max-height: 15%;
+img.main-icon{
+    max-width: 2%;
+    max-height: 2%;
     height: auto;
+    display: block;
+    float: right;
+    margin-top: 3px;
+    margin-right: 10px;
 }
 
 p.credit{
