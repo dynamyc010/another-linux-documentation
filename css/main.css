@@ -8,6 +8,8 @@
     --secondary-bg-color: #2D4059;
     --main-accent-color: #ff7c4cc5;
     --dark-accent-color: #ab4e18;
+    --credit-color: rgba(255, 255, 255, 0.25);
+    --highlight-color: rgba(255, 255, 255, 0.1);
 }
 
 body{
@@ -21,7 +23,7 @@ a{
 }
 
 h2{
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--highlight-color);
     padding: 3px;
 }
 
@@ -94,5 +96,9 @@ p.credit{
     font-size: 75%;
     font-style: italic;
     float: right;
-    color: rgba(255, 255, 255, 0.1);
+    color: var(--credit-color)
+}
+
+a.credit{
+    color: var(--main-accent-color);
 }
