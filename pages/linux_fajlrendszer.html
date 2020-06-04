@@ -73,6 +73,74 @@
         <p>Ez a mappa az éppen futó alkalmazásoknak az ideiglenes fájlait tartalmazza. Megint csak, <b>NE NYÚLKÁLJ IDE</b>, vagy az alkalmazásaid, lehetségesen a <b>teljes</b> rendszered lecrashelhet.</p>
         <img src="../media/filesystem/dirs/run.png" title="/run mappa">
         <p class="smoltext">(a WSL mappa az a Windows Subsystem for Linux miatt van ott. Ha natívan futtatod, nem lesz ott.)</p>
+
+        <h2>/sbin</h2>
+        <p>Ez a mappa a Superuser-nek a <i>/bin</i> mappája. Itt olyan parancsok vannak, melyek telepíteni, törölni, vagy formázni tudnak. <br><i>sudo</i>-val kell őket futtatni őket, úgyhogy nagy bajok nem lesznek, amíg vigyázol. </p>
+        <img src="../media/filesystem/dirs/sbin.png" title="/sbin mappa">
+
+        <h2>/usr</h2>
+        <p>Eredetileg ez volt a felhaszálók home mappája. Viszont mai napokban minden össze-vissza dolgot itt tart a rendszer. <br>Néhány alkalmazás is van itt,  könyvtárak, háttérképek, parancsok dokumentációi, és még sok más, ami alkalmazásoknak kellhet.</p>
+        <p>Láthatsz <i>bin, sbin és lib</i> mappákat is. De mivel másabbak? Nem sokkal mai napjainkban.<br>
+            Eredetileg a legalsó <i>/bin</i> mappában a legalapvetőbb parancsok voltak (például <i>ls, mv, rm</i>).<br>
+            Ezek a rendszer legfőbb működtetéséhez kellettek, viszont a <i>/usr/bin</i>-ben voltak a többi parancsok, melyek annyira nem voltak fontosak, a rendszer technikailag el tudott volna indulni nélküle, mint például a böngészők, szövegszerkesztők, stb.
+        </p>
+        <p>A mai napokban míg a Debian, Ubuntu és a Mint nem követte ezt, néhány disztribúció (Arch és társai) az összes alkalmazást a <i>/usr</i>-ben tartja, és csak csatolásokat hoz létre a többi mappa helyére, melyek pl. a usr-nek a bin-jébe mutatnak.</p>
+        <img src="../media/filesystem/dirs/usr.png" title="/usr mappa">
+
+        <h2>/srv</h2>
+        <p>Ez a mappa a szervereknek adatai, melyeket lehetségesen futtathatsz. Ha webszervert futtatsz, vagy <i>/srv/http</i>, vagy <i>/srv/www</i> alatt lesznek a fájlok. Ha FTP szervert futtatsz, akkor <i>/srv/ftp</i> alatt keresd. Stb.</p>
+        <img src="../media/filesystem/dirs/srv.png" title="/srv mappa dummy szerver-mappákkal">
+
+        <h2>/sys</h2>
+        <p>Ez is egy virtuális mappa. Itt minden csatlakoztatott eszközről találsz információt. Néhány dolgot változtathatsz is fájlok szerkesztésével, mint például laptopod képernyőjének fényességét.</p>
+        <p><b>NE NYÚLKÁLJ ITT</b>, ha nem tudod mit csinálsz.</p>
+        <img src="../media/filesystem/dirs/sys.png" title="/sys mappa">
+
+        <h2>/tmp</h2>
+        <p>Ebben a mappában az ideiglenes fájlok vannak, melyek alkalmazásaidnak (lehet) nem kell abban a pillanatban, de később használhatja.</p>
+        <p>Ezt a mappát te is tudod használni ideiglenes fájlokra, mert ezen azok a mappákhoz tartozik, melyhez nem kell Superuser ahhoz, hogy nyúlkálj itt.</p>
+        <img src="../media/filesystem/dirs/tmp.png" title="/tmp mappa">
+
+        <h2>/var</h2>
+        <p>Eredetileg ez a mappa a sokszor változtatott értékekre volt, de mai napjainkban már az elnevezése kicsit elavult, mivel nem ő az egyedüli mappa, amely sokszor változik.</p>
+        <p>Itt legtöbbször „log”-okat (alkalmazások által készített naplókat) a <i>/var/log</i> mappában.<br>
+            Ubuntu alatt láthatsz itt egy <i>/snap</i> mappát is, mely egy másik féle csomagkezelő, és itt tartja az összes Snap alatt telepített alkalmazásaid. 
+        </p>
+        <img src="../media/filesystem/dirs/var.png" title="/var mappa">
+
+
+        <h2>Hasznos parancsok és tippek!</h2>
+        <p>Ha körbe szeretnél nézni a fájlrendszereden, használhatod a </p> 
+        <div class="accent">cd &#60;mappa neve&#62;</div>
+        <p>parancsot.</p>
+        <img src="../media/filesystem/cmds/cd.png" title="cd parancs használata, mellyel a /home mappába kerülünk.">
+        <p class="smoltext">(a <i>cd ~</i> paranccsal a jelenlegi felhasználó /home mappájába kerülünk, ahol minden biztonságos :) )</p>
+
+        <p>Ha nem tudod, hogy hol vagy jelenleg, használd a</p> 
+        <div class="accent"> pwd </div>
+        <p>parancsot. <br>
+        Ez megmutatja a jelenlegi helyzetedet a fájlrendszerben.</p>
+        <img src="../media/filesystem/cmds/pwd.png" title="pwd parancs használata, mely kiírja nekünk a jelenlegi helyzetünket láthatjuk.">
+
+        <p>Az</p>
+        <div class="accent"> ls </div>
+        <p>nevű paranccsal kilistázhatjuk a jelenlegi mappánk tartalmát.</p>
+        <img src="../media/filesystem/cmds/ls.png" title="ls parancs használata, mely kilistázza nekünk a jelenlegi mappában lévő tartalmat.">
+        
+        <p>A</p>
+        <div class="accent">tree</div>
+        <p>paranccsal kilistázhatod a teljes fájlfát.</p>
+        <p class="smoltext">(ha nincs feltelepítve, a csomagkezelőd segítségével le tudod tölteni.)</p>
+        <img src="../media/filesystem/dirs/home.png" title="tree parancs használata, mely kilistázza nekünk a jelenlegi mappának a fájlfáját.">
+
+        <p>És legutolsó sorban, a</p>
+        <div class="accent"> sudo su </div>
+        <p>paranccsal tudsz Superuser módra váltani. Ebben a módban <b>MINDENHEZ</b> hozzáférsz, úgyhogy csak ésszel használni.</p>
+        <img src="../media/filesystem/cmds/sudosu.png" title="Superuser-re váltás a sudo su paranccsal">
+
+        <p>Nyugodtan bárhova bemehetsz, azzal kárt nem tehetsz, hogy mappákat listázol ki. <br>
+            Fejlődni meg csak akkor fogsz tudni, ha megismered a rendszered. 😉</p>
     </div>
+    <p class="credit">Készítette: Sebestyén Bálint</p>
 </body>
 </html>
