@@ -83,6 +83,8 @@ div.navigation a.selected:active{
 
 /* Other */
 
+/* Img */
+
 img.main-icon{
     max-width: 32px;
     max-height: 32px;
@@ -100,12 +102,20 @@ img.article-image{
     max-width: 120px;
 }
 
-p.credit{
-    font-size: 75%;
-    font-style: italic;
-    float: right;
-    color: var(--credit-color)
+img.under-text{
+    max-width: 80%;
+    display: block;
+    margin: auto;
 }
+
+img.quote{
+    max-width: 70px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+/* P */
 
 p.smoltext{
     font-size: 75%;
@@ -113,11 +123,28 @@ p.smoltext{
     margin-bottom: 0px;
 }
 
+p.credit{
+    font-size: 75%;
+    font-style: italic;
+    color: var(--credit-color);
+    display: block;
+    position: static;
+}
+
+/* A */
+
 a.credit{
     color: var(--main-accent-color);
 }
+
+/* Div */
 
 div.image-holder{
     display: inline;
     text-align: center;
 }
+
+div.quote{
+    margin-bottom: 70px;
+}
+
