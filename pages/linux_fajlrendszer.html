@@ -25,22 +25,54 @@
         
         <h2>/bin</h2>
         <p>A /bin mappa az binárisaidat, azaz a rendszered alapvető alkalmazásaid tartalmazza, mint például az <i>ls</i>, vagy akár a <i>firefox</i>. Máshol is találhatók „bin” nevű mappák, de azokról később beszélek.</p>
-        <img src="../media/filesystem/dirs/bin.png" title="Ubuntu-20.04 LTS - /bin mappa">
+        <img src="../media/filesystem/dirs/bin.png" title="/bin mappa">
 
         <h2>/boot</h2>
         <p>Ez a mappa meglepően az indításhoz szükséges fájlokat tartalmazza. Most mondom: <b>NE NYÚLJ HOZZÁ!</b> <br>Egy fájl törlése vagy akár átnevezése is végzetes lehet a rendszereden, úgyhogy kerüld az ebben a mappában történő nyúlkálást, hacsak nem tudod mit csinálsz. <br>
         Aggódnod viszont nem kell, hogy véletlen kitörölsz valamit innen, mert Superuser nélkül nem tudsz ebben a mappában semmit változtatni. </p>
-        <img src="../media/filesystem/dirs/boot.png" height="40%" width="40%" title="Ubuntu-20.04 LTS - /boot mappa">
+        <img src="../media/filesystem/dirs/boot.png" height="40%" width="40%" title="/boot mappa">
         
         <h2>/dev</h2>
         <p>Ez a mappa az eszközeidnek az elérési pontjai. <br>Ezek a fájlok indításkor, vagy akár futtatás közben is létrejöhetnek. Ha bedugsz egy USB eszközt a gépedbe, innen eltudod érni, legyen az Pendrive, vagy egy Webkamera.</p>
-        <img src="../media/filesystem/dirs/dev.png" height="40%" width="40%" title="Ubuntu-20.04 LTS - /dev mappa">
+        <img src="../media/filesystem/dirs/dev.png" height="40%" width="40%" title="/dev mappa">
 
         <h2>/etc</h2>
         <p>Ebben a mappában lehet, hogy összezavarodsz. Nyugi, én is úgy voltam.
         <br>Eredetileg, a Linux korai napjaiban, ez a mappa az „et cetera” nevezést hordozta, ahol olyan dolgokat tároltak, melyeknek helyét nem tudták hova meghatározni.</p>
         <p>Mai napjainkban inkább egy olyan hely, ahol a rendszernek azon fájlait tartja a Linux, melyek a rendszered beállításaid tartalmazza. Például a rendszered nevét, felhasználóit, jelszavait, a gépeddel egy hálózaton levő gépek nevét, és hogy a merevlemezeidet hova kéne csatlakoztatni.</p>
         <p>Ha még új vagy a Linux világában, nem ajánljuk, hogy nyúlkálj nagyon itt, hacsak nem tudod, hogy működik ez az egész.</p>
-    </div>  
+        <img src="../media/filesystem/dirs/etc.png" title="/etc mappa">
+
+        <h2>/home</h2>
+        <p>Ez a mappa a gépen levő felhasználók személyes fájlait tartalmazza. A mappa neve a felhasználónévből jön, esetemben /home/dynamyc létezik. Ezekben a mappákban általában biztonságban nyúlkálgathatsz.</p>
+        <img src="../media/filesystem/dirs/home.png" title="Általános Home mappa struktúra">
+
+        <h2>/lib</h2>
+        <p>Ezen a helyek az alkalmazásoknak a könyvtárjai élnek. Ezt Windows alatt „DLL”-nek, vagy „Dynamic-link Library”-nak ismerheted. Ezek segítségével tudja a rendszered kirajzolni az ablakokat, az egeredet feldolgozni és merevlemezre küldeni fájlokat.</p>
+        <p>Ebben a mappában legfőképpen a legfontosabb kernel modulokat tartalmazza, olyasmik, mint a Windowsban az illesztőprogramok. </p>
+        <img src="../media/filesystem/dirs/lib.png" height="30%" width="30%"title="/lib mappa">
+
+        <h2>/media</h2>
+        <p>Ebbe a mappába olyan eszközök csatolódnak fel, mint a frissen bedugott Pendrive-od.</p>
+        <p>Ez régen még nem létezett, mert nem voltak olyan eszközök, melyeket könnyen le- és <br>felcsatolni lehetett volna. Egyszerűen nem voltak támogatottak.</p>
+        <img src="../media/filesystem/dirs/media.png" title="Üres /media mappa">
+
+        <h2>/opt</h2>
+        <p>Ebbe a mappába a forráskódokból készített programok kerülnek, néha. <i>/opt/bin</i>-be az alkalmazások, <i>/opt/lib</i>-be a könytárak.</p>
+        <img src="../media/filesystem/dirs/opt.png" title="/opt mappa">
+
+        <h2>/proc</h2>
+        <p>Ez a mappa, mint a <i>/dev</i>, egy virtuális mappa. Ez a mappa a géped hardwaréről és a Linux kernelről tartalmaz információkat. Ugyanúgy ezek gép indításakor és futtatása közben is létrejöhetnek.</p>
+        <img src="../media/filesystem/dirs/proc.png" width="40%" height="40%" title="/proc mappa">
+
+        <h2>/root</h2>
+        <p>Ez a Superuser (másnéven „Adminisztrátor”) mappája. <b>NE</b> ide pakold a fájlaidat, nem arra van. Használd a <i>/home</i>-ban levő mappád erre.</p>
+        <img src="../media/filesystem/dirs/root.png" title="Üres /root mappa">
+
+        <h2>/run</h2>
+        <p>Ez a mappa az éppen futó alkalmazásoknak az ideiglenes fájlait tartalmazza. Megint csak, <b>NE NYÚLKÁLJ IDE</b>, vagy az alkalmazásaid, lehetségesen a <b>teljes</b> rendszered lecrashelhet.</p>
+        <img src="../media/filesystem/dirs/run.png" title="/run mappa">
+        <p class="smoltext">(a WSL mappa az a Windows Subsystem for Linux miatt van ott. Ha natívan futtatod, nem lesz ott.)</p>
+    </div>
 </body>
 </html>

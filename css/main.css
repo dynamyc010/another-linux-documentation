@@ -107,6 +107,12 @@ p.credit{
     color: var(--credit-color)
 }
 
+p.smoltext{
+    font-size: 75%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 a.credit{
     color: var(--main-accent-color);
 }
