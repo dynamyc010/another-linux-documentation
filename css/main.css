@@ -92,6 +92,14 @@ img.main-icon{
     margin-right: 10px;
 }
 
+img.article-image{
+    float: left;
+    display: block;
+    background-color: var(--highlight-color);
+    margin-right: 10px;
+    max-width: 120px;
+}
+
 p.credit{
     font-size: 75%;
     font-style: italic;
@@ -101,4 +109,9 @@ p.credit{
 
 a.credit{
     color: var(--main-accent-color);
+}
+
+div.image-holder{
+    display: inline;
+    text-align: center;
 }
