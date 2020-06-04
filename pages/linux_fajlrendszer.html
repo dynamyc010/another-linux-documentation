@@ -5,6 +5,7 @@
     <link rel="icon" href="../media/linux.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sebestyén Bálint">
     <title>Linux fájlrendszer</title>
 </head>
 <body>
@@ -15,69 +16,94 @@
         <a href="./valtas_linuxra.html">> Váltás Linuxra</a>
         <img src="../media/linux.png" alt="linux logo" class="main-icon">
     </div>
+
     <h1>Linux fájlrendszer</h1>
+
     <div class="container">
         <h2>Bevezető</h2>
         <p>Mai napjainkban a Linux alapú rendszerek általában ugyanúgy néznek ki, de kezdő Linuxosként lehet, hogy kérdezted már azt, hogy „Mik azok a mappák, melyeket a merevlemez legalján látok? Mire jók?”<br>
         Nos, ezen mappák legtöbbje a rendszer futtatásához szükséges (nah, ki gondolta volna, Sherlock), de tényleg, mire is jók?</p>
         <img src="../media/filesystem/dirs/driveRoot.png" height="310px" width="259px" title="Egy átlagos Linux rendszer lemezének legalja">
+
+        <h3>Tartalom</h3>
+
+        <ul>
+            <li><a href="#bin">/bin</a></li>
+            <li><a href="#boot">/boot</a></li>
+            <li><a href="#dev">/dev</a></li>
+            <li><a href="#etc">/etc</a></li>
+            <li><a href="#home">/home</a></li>
+            <li><a href="#lib">/lib</a></li>
+            <li><a href="#media">/media</a></li>
+            <li><a href="#opt">/opt</a></li>
+            <li><a href="#proc">/proc</a></li>
+            <li><a href="#root">/root</a></li>
+            <li><a href="#run">/run</a></li>
+            <li><a href="#sbin">/sbin</a></li>
+            <li><a href="#usr">/usr</a></li>
+            <li><a href="#srv">/srv</a></li>
+            <li><a href="#sys">/sys</a></li>
+            <li><a href="#tmp">/tmp</a></li>
+            <li><a href="#var">/var</a></li>
+            <li><a href="#tippek">Hasznos parancsok és tippek</a></li>
+        </ul>
         
-        <h2>/bin</h2>
+        <h2 id="bin">/bin</h2>
         <p>A /bin mappa az binárisaidat, azaz a rendszered alapvető alkalmazásaid tartalmazza, mint például az <i>ls</i>, vagy akár a <i>firefox</i>. Máshol is találhatók „bin” nevű mappák, de azokról később beszélek.</p>
         <img src="../media/filesystem/dirs/bin.png" title="/bin mappa">
 
-        <h2>/boot</h2>
+        <h2 id="boot">/boot</h2>
         <p>Ez a mappa meglepően az indításhoz szükséges fájlokat tartalmazza. Most mondom: <b>NE NYÚLJ HOZZÁ!</b> <br>Egy fájl törlése vagy akár átnevezése is végzetes lehet a rendszereden, úgyhogy kerüld az ebben a mappában történő nyúlkálást, hacsak nem tudod mit csinálsz. <br>
         Aggódnod viszont nem kell, hogy véletlen kitörölsz valamit innen, mert Superuser nélkül nem tudsz ebben a mappában semmit változtatni. </p>
         <img src="../media/filesystem/dirs/boot.png" height="40%" width="40%" title="/boot mappa">
         
-        <h2>/dev</h2>
+        <h2 id="dev">/dev</h2>
         <p>Ez a mappa az eszközeidnek az elérési pontjai. <br>Ezek a fájlok indításkor, vagy akár futtatás közben is létrejöhetnek. Ha bedugsz egy USB eszközt a gépedbe, innen eltudod érni, legyen az Pendrive, vagy egy Webkamera.</p>
         <img src="../media/filesystem/dirs/dev.png" height="40%" width="40%" title="/dev mappa">
 
-        <h2>/etc</h2>
+        <h2 id="etc">/etc</h2>
         <p>Ebben a mappában lehet, hogy összezavarodsz. Nyugi, én is úgy voltam.
         <br>Eredetileg, a Linux korai napjaiban, ez a mappa az „et cetera” nevezést hordozta, ahol olyan dolgokat tároltak, melyeknek helyét nem tudták hova meghatározni.</p>
         <p>Mai napjainkban inkább egy olyan hely, ahol a rendszernek azon fájlait tartja a Linux, melyek a rendszered beállításaid tartalmazza. Például a rendszered nevét, felhasználóit, jelszavait, a gépeddel egy hálózaton levő gépek nevét, és hogy a merevlemezeidet hova kéne csatlakoztatni.</p>
         <p>Ha még új vagy a Linux világában, nem ajánljuk, hogy nyúlkálj nagyon itt, hacsak nem tudod, hogy működik ez az egész.</p>
         <img src="../media/filesystem/dirs/etc.png" title="/etc mappa">
 
-        <h2>/home</h2>
+        <h2 id="home">/home</h2>
         <p>Ez a mappa a gépen levő felhasználók személyes fájlait tartalmazza. A mappa neve a felhasználónévből jön, esetemben /home/dynamyc létezik. Ezekben a mappákban általában biztonságban nyúlkálgathatsz.</p>
         <img src="../media/filesystem/dirs/home.png" title="Általános Home mappa struktúra">
 
-        <h2>/lib</h2>
+        <h2 id="lib">/lib</h2>
         <p>Ezen a helyek az alkalmazásoknak a könyvtárjai élnek. Ezt Windows alatt „DLL”-nek, vagy „Dynamic-link Library”-nak ismerheted. Ezek segítségével tudja a rendszered kirajzolni az ablakokat, az egeredet feldolgozni és merevlemezre küldeni fájlokat.</p>
         <p>Ebben a mappában legfőképpen a legfontosabb kernel modulokat tartalmazza, olyasmik, mint a Windowsban az illesztőprogramok. </p>
         <img src="../media/filesystem/dirs/lib.png" height="30%" width="30%"title="/lib mappa">
 
-        <h2>/media</h2>
+        <h2 id="media">/media</h2>
         <p>Ebbe a mappába olyan eszközök csatolódnak fel, mint a frissen bedugott Pendrive-od.</p>
         <p>Ez régen még nem létezett, mert nem voltak olyan eszközök, melyeket könnyen le- és <br>felcsatolni lehetett volna. Egyszerűen nem voltak támogatottak.</p>
         <img src="../media/filesystem/dirs/media.png" title="Üres /media mappa">
 
-        <h2>/opt</h2>
+        <h2 id="opt">/opt</h2>
         <p>Ebbe a mappába a forráskódokból készített programok kerülnek, néha. <i>/opt/bin</i>-be az alkalmazások, <i>/opt/lib</i>-be a könytárak.</p>
         <img src="../media/filesystem/dirs/opt.png" title="/opt mappa">
 
-        <h2>/proc</h2>
+        <h2 id="proc">/proc</h2>
         <p>Ez a mappa, mint a <i>/dev</i>, egy virtuális mappa. Ez a mappa a géped hardwaréről és a Linux kernelről tartalmaz információkat. Ugyanúgy ezek gép indításakor és futtatása közben is létrejöhetnek.</p>
         <img src="../media/filesystem/dirs/proc.png" width="40%" height="40%" title="/proc mappa">
 
-        <h2>/root</h2>
+        <h2 id="root">/root</h2>
         <p>Ez a Superuser (másnéven „Adminisztrátor”) mappája. <b>NE</b> ide pakold a fájlaidat, nem arra van. Használd a <i>/home</i>-ban levő mappád erre.</p>
         <img src="../media/filesystem/dirs/root.png" title="Üres /root mappa">
 
-        <h2>/run</h2>
+        <h2 id="run">/run</h2>
         <p>Ez a mappa az éppen futó alkalmazásoknak az ideiglenes fájlait tartalmazza. Megint csak, <b>NE NYÚLKÁLJ IDE</b>, vagy az alkalmazásaid, lehetségesen a <b>teljes</b> rendszered lecrashelhet.</p>
         <img src="../media/filesystem/dirs/run.png" title="/run mappa">
         <p class="smoltext">(a WSL mappa az a Windows Subsystem for Linux miatt van ott. Ha natívan futtatod, nem lesz ott.)</p>
 
-        <h2>/sbin</h2>
+        <h2 id="sbin">/sbin</h2>
         <p>Ez a mappa a Superuser-nek a <i>/bin</i> mappája. Itt olyan parancsok vannak, melyek telepíteni, törölni, vagy formázni tudnak. <br><i>sudo</i>-val kell őket futtatni őket, úgyhogy nagy bajok nem lesznek, amíg vigyázol. </p>
         <img src="../media/filesystem/dirs/sbin.png" title="/sbin mappa">
 
-        <h2>/usr</h2>
+        <h2 id="usr">/usr</h2>
         <p>Eredetileg ez volt a felhaszálók home mappája. Viszont mai napokban minden össze-vissza dolgot itt tart a rendszer. <br>Néhány alkalmazás is van itt,  könyvtárak, háttérképek, parancsok dokumentációi, és még sok más, ami alkalmazásoknak kellhet.</p>
         <p>Láthatsz <i>bin, sbin és lib</i> mappákat is. De mivel másabbak? Nem sokkal mai napjainkban.<br>
             Eredetileg a legalsó <i>/bin</i> mappában a legalapvetőbb parancsok voltak (például <i>ls, mv, rm</i>).<br>
@@ -86,21 +112,21 @@
         <p>A mai napokban míg a Debian, Ubuntu és a Mint nem követte ezt, néhány disztribúció (Arch és társai) az összes alkalmazást a <i>/usr</i>-ben tartja, és csak csatolásokat hoz létre a többi mappa helyére, melyek pl. a usr-nek a bin-jébe mutatnak.</p>
         <img src="../media/filesystem/dirs/usr.png" title="/usr mappa">
 
-        <h2>/srv</h2>
+        <h2 id="srv">/srv</h2>
         <p>Ez a mappa a szervereknek adatai, melyeket lehetségesen futtathatsz. Ha webszervert futtatsz, vagy <i>/srv/http</i>, vagy <i>/srv/www</i> alatt lesznek a fájlok. Ha FTP szervert futtatsz, akkor <i>/srv/ftp</i> alatt keresd. Stb.</p>
         <img src="../media/filesystem/dirs/srv.png" title="/srv mappa dummy szerver-mappákkal">
 
-        <h2>/sys</h2>
+        <h2 id="sys">/sys</h2>
         <p>Ez is egy virtuális mappa. Itt minden csatlakoztatott eszközről találsz információt. Néhány dolgot változtathatsz is fájlok szerkesztésével, mint például laptopod képernyőjének fényességét.</p>
         <p><b>NE NYÚLKÁLJ ITT</b>, ha nem tudod mit csinálsz.</p>
         <img src="../media/filesystem/dirs/sys.png" title="/sys mappa">
 
-        <h2>/tmp</h2>
+        <h2 id="tmp">/tmp</h2>
         <p>Ebben a mappában az ideiglenes fájlok vannak, melyek alkalmazásaidnak (lehet) nem kell abban a pillanatban, de később használhatja.</p>
         <p>Ezt a mappát te is tudod használni ideiglenes fájlokra, mert ezen azok a mappákhoz tartozik, melyhez nem kell Superuser ahhoz, hogy nyúlkálj itt.</p>
         <img src="../media/filesystem/dirs/tmp.png" title="/tmp mappa">
 
-        <h2>/var</h2>
+        <h2 id="var">/var</h2>
         <p>Eredetileg ez a mappa a sokszor változtatott értékekre volt, de mai napjainkban már az elnevezése kicsit elavult, mivel nem ő az egyedüli mappa, amely sokszor változik.</p>
         <p>Itt legtöbbször „log”-okat (alkalmazások által készített naplókat) a <i>/var/log</i> mappában.<br>
             Ubuntu alatt láthatsz itt egy <i>/snap</i> mappát is, mely egy másik féle csomagkezelő, és itt tartja az összes Snap alatt telepített alkalmazásaid. 
@@ -108,7 +134,7 @@
         <img src="../media/filesystem/dirs/var.png" title="/var mappa">
 
 
-        <h2>Hasznos parancsok és tippek!</h2>
+        <h2 id="tippek">Hasznos parancsok és tippek!</h2>
         <p>Ha körbe szeretnél nézni a fájlrendszereden, használhatod a </p> 
         <div class="accent">cd &#60;mappa neve&#62;</div>
         <p>parancsot.</p>
