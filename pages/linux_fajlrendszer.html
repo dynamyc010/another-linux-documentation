@@ -17,5 +17,30 @@
         <img src="../media/linux.png" alt="linux logo" class="main-icon">
     </div>
     <h1>Linux fájlrendszer</h1>
+    <div class="container">
+        <h2>Bevezető</h2>
+        <p>Mai napjainkban a Linux alapú rendszerek általában ugyanúgy néznek ki, de kezdő Linuxosként lehet, hogy kérdezted már azt, hogy „Mik azok a mappák, melyeket a merevlemez legalján látok? Mire jók?”<br>
+        Nos, ezen mappák legtöbbje a rendszer futtatásához szükséges (nah, ki gondolta volna, Sherlock), de tényleg, mire is jók?</p>
+        <img src="../media/filesystem/dirs/driveRoot.png" height="310px" width="259px" title="Egy átlagos Linux rendszer lemezének legalja">
+        
+        <h2>/bin</h2>
+        <p>A /bin mappa az binárisaidat, azaz a rendszered alapvető alkalmazásaid tartalmazza, mint például az <i>ls</i>, vagy akár a <i>firefox</i>. Máshol is találhatók „bin” nevű mappák, de azokról később beszélek.</p>
+        <img src="../media/filesystem/dirs/bin.png" title="Ubuntu-20.04 LTS - /bin mappa">
+
+        <h2>/boot</h2>
+        <p>Ez a mappa meglepően az indításhoz szükséges fájlokat tartalmazza. Most mondom: <b>NE NYÚLJ HOZZÁ!</b> <br>Egy fájl törlése vagy akár átnevezése is végzetes lehet a rendszereden, úgyhogy kerüld az ebben a mappában történő nyúlkálást, hacsak nem tudod mit csinálsz. <br>
+        Aggódnod viszont nem kell, hogy véletlen kitörölsz valamit innen, mert Superuser nélkül nem tudsz ebben a mappában semmit változtatni. </p>
+        <img src="../media/filesystem/dirs/boot.png" height="40%" width="40%" title="Ubuntu-20.04 LTS - /boot mappa">
+        
+        <h2>/dev</h2>
+        <p>Ez a mappa az eszközeidnek az elérési pontjai. <br>Ezek a fájlok indításkor, vagy akár futtatás közben is létrejöhetnek. Ha bedugsz egy USB eszközt a gépedbe, innen eltudod érni, legyen az Pendrive, vagy egy Webkamera.</p>
+        <img src="../media/filesystem/dirs/dev.png" height="40%" width="40%" title="Ubuntu-20.04 LTS - /dev mappa">
+
+        <h2>/etc</h2>
+        <p>Ebben a mappában lehet, hogy összezavarodsz. Nyugi, én is úgy voltam.
+        <br>Eredetileg, a Linux korai napjaiban, ez a mappa az „et cetera” nevezést hordozta, ahol olyan dolgokat tároltak, melyeknek helyét nem tudták hova meghatározni.</p>
+        <p>Mai napjainkban inkább egy olyan hely, ahol a rendszernek azon fájlait tartja a Linux, melyek a rendszered beállításaid tartalmazza. Például a rendszered nevét, felhasználóit, jelszavait, a gépeddel egy hálózaton levő gépek nevét, és hogy a merevlemezeidet hova kéne csatlakoztatni.</p>
+        <p>Ha még új vagy a Linux világában, nem ajánljuk, hogy nyúlkálj nagyon itt, hacsak nem tudod, hogy működik ez az egész.</p>
+    </div>  
 </body>
 </html>
